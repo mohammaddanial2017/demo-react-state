@@ -1,0 +1,18 @@
+/* html body #root .room {
+    height: 100%;
+    margin: 0;
+} */
+
+.room {
+    height: 100vh;
+}
+
+.lit {
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}

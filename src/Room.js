@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
+import './Room.css';
 
 function Room() {
     // const state = useState(true);
@@ -18,6 +19,8 @@ function Room() {
     //     // setAge(++age);
     // }
 
+    const dummyFunc = () => () => setLit(!isLit);
+
     // const increaseAge = () => {
     //     console.log("Button Clicked!");
     //     // isLit = !isLit;
@@ -26,13 +29,14 @@ function Room() {
     // }
 
     return (
-        <div>
+        <div className={`room ${isLit ? 'lit' : 'dark'}`}>
             This Room is {isLit ? 'lit' : 'dark'}
             <br />
             Age: {age}
             <br />
             {/* <button onClick={updateLit} >Toggle Light</button> */}
-            <button onClick={() => setLit(!isLit)} >Toggle Light</button>
+            {/* <button onClick={() => setLit(!isLit)} >Toggle Light</button> */}
+            <button onClick={dummyFunc()} >Toggle Light</button>
             <br />
             <button onClick={() => {
                 console.log("Increase age arrow function!");
